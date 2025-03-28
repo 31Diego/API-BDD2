@@ -32,6 +32,19 @@ mongoose.connect(uri, options).then(
 
 // definiendo schemas y modelos en mongoose
 
+const clientesSchema = new Schema({
+    id: { type: Number, required: true, unique: true },
+    nombre: { type: String },
+    email: { type: String, unique: true },
+    direccion: { type: String },
+    fecha_registro: { type: Date, default: Date.now },
+    historial_pedidos: { type: Schema.Types.Mixed, default: [] }
+
+},);
+
+let clientes = new mongoose.model('clientes', clientesSchema);
+
+
 
 
 
@@ -42,8 +55,10 @@ mongoose.connect(uri, options).then(
 
 console.log(query.course);
 try {
-   
-    
+    let inserted_a = await clientes.insertMany(query.clientes);
+
+
+
     //console.log(inserted_a);
     process.exit(0);
 } catch (e) {
