@@ -31,14 +31,25 @@ mongoose.connect(uri, options).then(
     });
 
 // definiendo schemas y modelos en mongoose
+const productosSchema = new Schema({
+    id: { type: Number, required: true, unique: true },
+    nombre: { type: String },
+    descripcion: { type: String },
+    precio: { type: Number },
+    stock: { type: Number },
+    categoria: { 
+        type: String, 
+        enum: ['Entrante', 'Plato Principal', 'Postre', 'bebida'], 
+        default: 'Entrante' 
+    },
+    disponible: {type: Number},
+    ingredientes: { type: Schema.Types.Mixed, default: [] }
+    
+});
 
+let productos = new mongoose.model('productos', productosSchema);
 
-
-
-
-
-
-
+let inserted_d = await productos.insertMany(query.productos);
 
 console.log(query.course);
 try {
