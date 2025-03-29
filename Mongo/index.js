@@ -49,10 +49,11 @@ const productosSchema = new Schema({
 
 let productos = new mongoose.model('productos', productosSchema);
 
-let inserted_d = await productos.insertMany(query.productos);
+
 
 console.log(query.course);
 try {
+    let inserted_d = await productos.insertMany(query.productos);
    
     
     //console.log(inserted_a);
