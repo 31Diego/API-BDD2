@@ -30,7 +30,26 @@ mongoose.connect(uri, options).then(
         process.exit(0);
     });
 
+const pedidosSchema = new Schema({
+    id: { type: Number, required: true, unique: true },
+    id_cliente: { type: Number },
+    id_producto: { type: Number },
+    cantidad: { type: Number },
+    total: { type: Number },
+    fecha_pedido: { type: Date, default: Date.now },
+    estado: { 
+        type: String, 
+        enum: ['Pendiente', 'En preparación', 'Entregado', 'Cancelado'], 
+        default: 'Pendiente' 
+    },
+});
+let pedidos = new mongoose.model('pedidos', pedidosSchema);
+
+    let inserted_c = await pedidos.insertMany(query.pedidos);
+    
+
 // definiendo schemas y modelos en mongoose
+
 
 
 
