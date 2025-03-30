@@ -43,7 +43,6 @@ const empleadosSchema = new Schema({
 let empleados = new mongoose.model('empleados', empleadosSchema);
 
 
-let inserted_b = await empleados.insertMany(query.empleados);
 
 
 
@@ -53,6 +52,8 @@ let inserted_b = await empleados.insertMany(query.empleados);
 
 console.log(query.course);
 try {
+    let inserted_b = await empleados.insertMany(query.empleados);
+
    
     
     //console.log(inserted_a);
