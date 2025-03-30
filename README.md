@@ -8,5 +8,5 @@ Este proyecto consiste en una API para gestionar los pedidos, productos, cliente
 - **Express**: Framework web para Node.js.
 - **MongoDB**: Base de datos NoSQL.
 - **Mongoose**: Librería de ODM para interactuar con MongoDB.
-
+- **Web**: Posibilidad de interactuar directamente con la base de datos de mongodb desde una página web (en proceso).
 
