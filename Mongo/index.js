@@ -31,16 +31,7 @@ mongoose.connect(uri, options).then(
     });
 
 // definiendo schemas y modelos en mongoose
-const empleadosSchema = new Schema({
-    id: { type: Number, required: true, unique: true },
-    nombre: { type: String },
-    puesto: { type: String},
-    salario: { type: String },
-    contratado_el: { type: Date, default: Date.now },
-    
-});
 
-let empleados = new mongoose.model('empleados', empleadosSchema);
 
 
 
@@ -52,7 +43,7 @@ let empleados = new mongoose.model('empleados', empleadosSchema);
 
 console.log(query.course);
 try {
-    let inserted_b = await empleados.insertMany(query.empleados);
+    
 
    
     
