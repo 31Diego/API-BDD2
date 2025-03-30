@@ -30,6 +30,11 @@ mongoose.connect(uri, options).then(
         process.exit(0);
     });
 
+
+
+    
+
+// definiendo schemas y modelos en mongoose
 const pedidosSchema = new Schema({
     id: { type: Number, required: true, unique: true },
     id_cliente: { type: Number },
@@ -45,11 +50,6 @@ const pedidosSchema = new Schema({
 });
 let pedidos = new mongoose.model('pedidos', pedidosSchema);
 
-    let inserted_c = await pedidos.insertMany(query.pedidos);
-    
-
-// definiendo schemas y modelos en mongoose
-
 
 
 
@@ -61,6 +61,11 @@ let pedidos = new mongoose.model('pedidos', pedidosSchema);
 
 console.log(query.course);
 try {
+    
+    
+    
+    let inserted_c = await pedidos.insertMany(query.pedidos);
+
    
     
     //console.log(inserted_a);
