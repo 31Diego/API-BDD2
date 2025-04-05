@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel de Restaurante</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Listado desde la API</h1>
-    <button id="btn-cargar">Cargar Datos</button>
-    <table id="tabla-datos">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Teléfono</th>
-          <th>Correo</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+    <h1>Bienvenido al Restaurante</h1>
 
-  <script src="script.js"></script>
+    <!-- Productos -->
+    <h2>Productos</h2>
+    <div id="productos-lista"></div>
+
+    <!-- Clientes -->
+    <h2>Clientes</h2>
+    <div id="clientes-lista"></div>
+
+    <!-- Empleados -->
+    <h2>Empleados</h2>
+    <div id="empleados-lista"></div>
+
+    <!-- Pedidos -->
+    <h2>Pedidos</h2>
+    <div id="pedidos-lista"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/clientes.js"></script>
+    <script src="js/empleados.js"></script>
+    <script src="js/pedidos.js"></script>
 </body>
 </html>
