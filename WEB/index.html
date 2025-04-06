@@ -7,23 +7,33 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Bienvenido al Restaurante</h1>
+    <div class="container">
+        <h1>Restaurante - Gestión</h1>
 
-    <!-- Productos -->
-    <h2>Productos</h2>
-    <div id="productos-lista"></div>
+        <div class="section">
+            <h2>Productos</h2>
+            <button onclick="cargarProductos()">Cargar Productos</button>
+            <div id="productos-lista"></div>
+        </div>
 
-    <!-- Clientes -->
-    <h2>Clientes</h2>
-    <div id="clientes-lista"></div>
+        <div class="section">
+            <h2>Clientes</h2>
+            <button onclick="cargarClientes()">Cargar Clientes</button>
+            <div id="clientes-lista"></div>
+        </div>
 
-    <!-- Empleados -->
-    <h2>Empleados</h2>
-    <div id="empleados-lista"></div>
+        <div class="section">
+            <h2>Empleados</h2>
+            <button onclick="cargarEmpleados()">Cargar Empleados</button>
+            <div id="empleados-lista"></div>
+        </div>
 
-    <!-- Pedidos -->
-    <h2>Pedidos</h2>
-    <div id="pedidos-lista"></div>
+        <div class="section">
+            <h2>Pedidos</h2>
+            <button onclick="cargarPedidos()">Cargar Pedidos</button>
+            <div id="pedidos-lista"></div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
     <script src="js/productos.js"></script>

@@ -4,11 +4,10 @@ async function cargarProductos() {
     lista.innerHTML = productos.map(producto => `
         <div>
             <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
+            <p>Descripción: ${producto.descripcion}</p>
             <p>Precio: $${producto.precio}</p>
             <p>Stock: ${producto.stock}</p>
+            <p>Categoría: ${producto.categoria}</p>
         </div>
     `).join('');
 }
-
-document.addEventListener('DOMContentLoaded', cargarProductos);

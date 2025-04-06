@@ -4,11 +4,9 @@ async function cargarPedidos() {
     lista.innerHTML = pedidos.map(pedido => `
         <div>
             <h3>Pedido #${pedido.id}</h3>
-            <p>Cliente: ${pedido.id_cliente}</p>
+            <p>Cliente ID: ${pedido.id_cliente}</p>
             <p>Total: $${pedido.total}</p>
             <p>Estado: ${pedido.estado}</p>
         </div>
     `).join('');
 }
-
-document.addEventListener('DOMContentLoaded', cargarPedidos);

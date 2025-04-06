@@ -9,5 +9,3 @@ async function cargarEmpleados() {
         </div>
     `).join('');
 }
-
-document.addEventListener('DOMContentLoaded', cargarEmpleados);
